@@ -11,6 +11,7 @@
 (include "./windows/winlang.yuck")
 (include "./windows/winactions.yuck")
 (include "./windows/winnotif.yuck")
+(include "./windows/winosd.yuck")
 (include "./windows/wingamebar.yuck")
 
 (defwidget winbar []

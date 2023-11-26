@@ -81,8 +81,7 @@
               :onclick "scripts/net toggle"
               :class "winactions-toggle-icon winactions-toggle-icon-left winwifi${net.level}${net.essid != 'lo' ? '-activated' : ''}"
             )
-            (button
-              :onclick "gnome-control-center wifi &"
+            (box
               :class "winactions-toggle-icon winactions-toggle-arrow${(net.essid != 'lo') ? '-activated' : ''}"
             )
           )
@@ -167,11 +166,10 @@
         :space-evenly false
         :orientation "h"
         :class "winwin-bottom-pad"
-        (button
+        (box
           :class "winactions-bottom-button"
           :halign "start"
           :style "padding: 0 13px;"
-          :onclick "scripts/toggle-winactions.sh --close power &"
           (box
             :space-evenly false
             :orientation "h"
@@ -181,9 +179,8 @@
         )
         (box)
         (box
-          (button
+          (box
             :halign "end"
-            :onclick "scripts/toggle-winactions.sh --close settings &"
             :class "winactions-bottom-button wincog winicon"
           )
         )

@@ -83,10 +83,9 @@
         (box :space-evenly false :height 35
           :halign "end"
           (label :class "winnews-clock" :text {time12})
-          (button
+          (box
             :halign "end"
             :class "winnews-user"
-            :onclick "scripts/toggle-winnews.sh --close && gnome-control-center user-accounts &"
             (box :height 35 :width 35
               :class "winstart-user-icon"
             )

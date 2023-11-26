@@ -541,10 +541,9 @@
           :orientation "h"
           :class "winwin-bottom winstart-bottom-pad"
           :height 67
-          (button
+          (box
             :halign "start"
             :class "winstart-user"
-            :onclick "scripts/toggle-winstart.sh --close && gnome-control-center user-accounts &"
             (box
               :space-evenly false
               :orientation "h"

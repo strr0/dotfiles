@@ -32,6 +32,8 @@
 (defvar calendartitle '')
 (defvar record_sound false)
 (defvar resource_metric "cpu")
+(defvar osd_bright false)
+(defvar osd_vol false)
 
 ; Dynamic animation: different for open and close
 (defvar rev_winnews false)
