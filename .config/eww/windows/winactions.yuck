@@ -95,8 +95,7 @@
               :onclick "scripts/bluetooth toggle &"
               :class "winactions winactions-toggle-icon-left winbluetooth${bluetooth.text == 'Disconnected' ? '' : (bluetooth.text == 'Bluetooth off' ? '-false' : '-true')}"
             )
-            (button
-              :onclick "blueberry &"
+            (box
               :class "winactions-toggle-icon-right winactions-toggle-arrow${bluetooth.text == 'Bluetooth off' ? '' : '-activated'}"
             )
           )

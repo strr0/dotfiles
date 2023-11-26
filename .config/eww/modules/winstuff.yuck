@@ -79,9 +79,8 @@
 )
 
 (defwidget wintray-button []
-  (eventbox
+  (box
     :class "winbarbutton-h${tray_is_open ? '-open' : ''}"
-    :onclick "pkill waybar || waybar -c ~/.config/eww/scripts/custom_configs/waybar-tray-config/config && sleep 0.9 && scripts/update-tray.sh &"
     (box
       :class "winbutton-pad"
       (image
