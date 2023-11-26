@@ -1,0 +1,34 @@
+[
+    {
+        "address": [],
+        "class": "org.gnome.Nautilus",
+        "count": 0,
+        "icon": "images/svg/apps/nautilus.svg",
+        "workspace": [],
+        "exec": "nautilus --new-window &"
+    },
+    {
+        "address": [],
+        "class": "Microsoft-edge",
+        "count": 0,
+        "icon": "images/svg/apps/microsoft-edge.svg",
+        "workspace": [],
+        "exec": "microsoft-edge-stable &"
+    },
+    {
+        "address": [],
+        "class": "Code",
+        "count": 0,
+        "icon": "images/svg/apps/code.svg",
+        "workspace": [],
+        "exec": "code &"
+    },
+    {
+        "address": [],
+        "class": "foot",
+        "count": 0,
+        "icon": "images/svg/apps/foot.svg",
+        "workspace": [],
+        "exec": "foot &"
+    }
+]

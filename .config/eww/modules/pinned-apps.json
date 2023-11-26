@@ -1,0 +1,21 @@
+[ 
+    [
+        {"name": "File Explorer", "exec": "gtk-launch org.gnome.Nautilus.desktop &", "icon": "images/svg/apps/nautilus.svg"},
+        {"name": "Firefox", "exec": "gtk-launch firefox &", "icon": "images/svg/apps/firefox.svg"},
+        {"name": "Terminal", "exec": "gtk-launch org.codeberg.dnkl.foot.desktop &", "icon": "images/svg/apps/foot.svg"},
+        {"name": "Paint", "exec": "gtk-launch org.kde.kolourpaint.desktop &", "icon": "images/svg/apps/kolourpaint.svg"},
+        {"name": "Settings", "exec": "gtk-launch org.gnome.Settings.desktop &", "icon": "images/svg/apps/gnome-control-center.svg"},
+        {"name": "Notepad", "exec": "gtk-launch org.gnome.TextEditor &", "icon": "images/svg/apps/org.gnome.TextEditor.svg"}
+    ],
+    [
+        {"name": "Clock", "exec": "gtk-launch org.gnome.clocks &", "icon": "images/svg/apps/gnome-clocks.svg"},
+        {"name": "Edge", "exec": "microsoft-edge-stable &", "icon": "images/svg/apps/microsoft-edge.svg"},
+        {"name": "Visual Studio Code", "exec": "code &", "icon": "images/svg/apps/code.svg"},
+        {"name": "Calculator", "exec": "gtk-launch org.gnome.Calculator &", "icon": "images/svg/apps/org.gnome.Calculator.svg"},
+        {"name": "GitHub Desktop", "exec": "gtk-launch github-desktop &", "icon": "images/svg/apps/github-desktop.svg"},
+        {"name": "Photos", "exec": "gtk-launch org.gnome.eog &", "icon": "images/svg/apps/eog.svg"}
+    ],
+    [
+        {"name": "VLC Media Player", "exec": "gtk-launch vlc &", "icon": "images/svg/apps/vlc.svg"}
+    ]
+]

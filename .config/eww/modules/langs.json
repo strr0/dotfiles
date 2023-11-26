@@ -1,0 +1,14 @@
+[
+    {
+        "name": "English (United States)",
+        "name_method": "US",
+        "name_ibus": "xkb:us::eng",
+        "name_abbr": "ENG"
+    },
+    {
+        "name": "Chinese",
+        "name_method": "Pinyin",
+        "name_ibus": "pinyin",
+        "name_abbr": "拼"
+    }
+]
