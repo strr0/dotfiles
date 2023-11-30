@@ -55,6 +55,10 @@
 (defvar anim_open_winnotif true)
 (defvar anim_open_wingamebar true)
 
+(defvar flight_mode false)
+(defvar net_service_info false)
+(defvar bluetooth_service_info false)
+
 ; Time
 (defpoll time :interval "5s" `date +'{"date": "%d/%m", "hour": "%H", "minute": "%M", "monthname": "%B", "day": "%A", "year": "%Y"}'`)
 (defpoll day_only :interval "5s" "date '+%e' | sed 's/ //g'")

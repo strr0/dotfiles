@@ -16,10 +16,12 @@ if [ "$1" = "toggle" ]; then
   toggle
 else
   while true; do
-    powered=$(bluetoothctl show | rg Powered | cut -f 2- -d ' ')
-    status=$(bluetoothctl info)
-    name=$(echo "$status" | rg Name | cut -f 2- -d ' ')
-    mac=$(echo "$status" | head -1 | awk '{print $2}' | tr ':' '_')
+    if [ "$(eww get bluetooth_service_info)" = "true" ]; then
+      powered=$(bluetoothctl show | rg Powered | cut -f 2- -d ' ')
+      status=$(bluetoothctl info)
+      name=$(echo "$status" | rg Name | cut -f 2- -d ' ')
+      mac=$(echo "$status" | head -1 | awk '{print $2}' | tr ':' '_')
+    fi
 
     if [[ "$(echo "$status" | rg Percentage)" != "" ]]; then
       battery=$(upower -i /org/freedesktop/UPower/devices/headset_dev_"$mac" | rg percentage | awk '{print $2}' | cut -f 1 -d '%')

@@ -14,9 +14,11 @@ if [ "$1" = "toggle" ]; then
   toggle
 else
   while true; do
-    status=$(nmcli g | tail -n 1 | awk '{print $1}')
-    signal=$(nmcli -f in-use,signal dev wifi | rg "\*" | awk '{ print $2 }')
-    essid=$(nmcli -t -f NAME connection show --active | head -n1 | sed 's/\"/\\"/g')
+    if [ "$(eww get net_service_info)" = "true" ]; then
+      status=$(nmcli g | tail -n 1 | awk '{print $1}')
+      signal=$(nmcli -f in-use,signal dev wifi | rg "\*" | awk '{ print $2 }')
+      essid=$(nmcli -t -f NAME connection show --active | head -n1 | sed 's/\"/\\"/g')
+    fi
 
     icons=("" "" "" "" "")
 

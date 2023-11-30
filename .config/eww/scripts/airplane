@@ -14,9 +14,11 @@ toggle() {
   if [[ $STATUS == "no" ]]; then
     rfkill block all
     notify-send --urgency=normal -i airplane-mode-symbolic "Airplane Mode" "Airplane mode has been turned on!"
+    eww update flight_mode=true
   else
     rfkill unblock all
     notify-send --urgency=normal  -i airplane-mode-disabled-symbolic "Airplane Mode" "Airplane mode has been turned off!"
+    eww update flight_mode=false
   fi
 }
 

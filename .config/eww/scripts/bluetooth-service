@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+status() {
+  systemctl status bluetooth
+}
+
+start() {
+  systemctl start bluetooth
+}
+
+stop() {
+  systemctl stop bluetooth
+}
+
+toggle() {
+  status
+  if [ $? = 0 ]; then
+    stop
+  else
+    start
+  fi
+}
+
+info() {
+  state=$(eww get bluetooth_service_info)
+  if [ "$state" = "true" ]; then
+    eww update bluetooth_service_info=false
+  else
+    eww update bluetooth_service_info=true
+  fi
+}
+
+if [ "$1" = "start" ]; then
+  start
+elif [ "$1" = "stop" ]; then
+  stop
+elif [ "$1" = "toggle" ]; then
+  toggle
+else
+  info
+fi

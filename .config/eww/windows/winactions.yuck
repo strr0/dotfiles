@@ -79,10 +79,12 @@
             :orientation "h"
             (button
               :onclick "scripts/net toggle"
+              :onrightclick "scripts/net-service toggle"
               :class "winactions-toggle-icon winactions-toggle-icon-left winwifi${net.level}${net.essid != 'lo' ? '-activated' : ''}"
             )
-            (box
-              :class "winactions-toggle-icon winactions-toggle-arrow${(net.essid != 'lo') ? '-activated' : ''}"
+            (button
+              :onrightclick "scripts/net-service"
+              :class "winactions-toggle-icon winactions-toggle-arrow${net_service_info ? '-activated' : ''}"
             )
           )
           (label :class "wintoggle-text" :text "${net.essid}")
@@ -93,20 +95,22 @@
             :orientation "h"
             (button
               :onclick "scripts/bluetooth toggle &"
-              :class "winactions winactions-toggle-icon-left winbluetooth${bluetooth.text == 'Disconnected' ? '' : (bluetooth.text == 'Bluetooth off' ? '-false' : '-true')}"
+              :onrightclick "scripts/bluetooth-service toggle"
+              :class "winactions-toggle-icon winactions-toggle-icon-left winbluetooth${bluetooth.text == 'Disconnected' ? '' : (bluetooth.text == 'Bluetooth off' ? '-false' : '-true')}"
             )
-            (box
-              :class "winactions-toggle-icon-right winactions-toggle-arrow${bluetooth.text == 'Bluetooth off' ? '' : '-activated'}"
+            (button
+              :onrightclick "scripts/bluetooth-service"
+              :class "winactions-toggle-icon winactions-toggle-arrow${bluetooth_service_info ? '-activated' : ''}"
             )
           )
           (label :class "wintoggle-text" :text "${bluetooth.text}")
         )
         (box :orientation "v" :space-evenly false
           (box
-            :class "winactions-toggle winactions-toggle-center"
+            :class "winactions-toggle winactions-toggle-center winactions-toggle-${flight_mode}"
             (button
               :onclick "scripts/airplane toggle &"
-              :class "winactions-toggle-icon winactions-toggle-icon-center winactions-airplane"
+              :class "winactions-toggle-icon winactions-toggle-icon-center winactions-airplane${flight_mode ? '-activated' : ''}"
             )
           )
           (label :class "wintoggle-text" :text "Flight Mode")

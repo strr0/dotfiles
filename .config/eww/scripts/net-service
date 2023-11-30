@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+status() {
+  systemctl status NetworkManager
+}
+
+start() {
+  systemctl start NetworkManager
+}
+
+stop() {
+  systemctl stop NetworkManager
+}
+
+toggle() {
+  status
+  if [ $? = 0 ]; then
+    stop
+  else
+    start
+  fi
+}
+
+info() {
+  state=$(eww get net_service_info)
+  if [ "$state" = "true" ]; then
+    eww update net_service_info=false
+  else
+    eww update net_service_info=true
+  fi
+}
+
+if [ "$1" = "start" ]; then
+  start
+elif [ "$1" = "stop" ]; then
+  stop
+elif [ "$1" = "toggle" ]; then
+  toggle
+else
+  info
+fi
