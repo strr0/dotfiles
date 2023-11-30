@@ -22,11 +22,11 @@ toggle() {
 }
 
 info() {
-  state=$(eww get net_service_info)
-  if [ "$state" = "true" ]; then
-    eww update net_service_info=false
-  else
+  status
+  if [ $? = 0 ]; then
     eww update net_service_info=true
+  else
+    eww update net_service_info=false
   fi
 }
 

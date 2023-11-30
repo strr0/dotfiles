@@ -22,11 +22,11 @@ toggle() {
 }
 
 info() {
-  state=$(eww get bluetooth_service_info)
-  if [ "$state" = "true" ]; then
-    eww update bluetooth_service_info=false
-  else
+  status
+  if [ $? = 0 ]; then
     eww update bluetooth_service_info=true
+  else
+    eww update bluetooth_service_info=false
   fi
 }
 
